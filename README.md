@@ -125,3 +125,12 @@ The manual is maintained as a [wiki](https://github.com/joergklein/code-server/w
 	- [Browse for extensions](https://github.com/joergklein/code-server/wiki/VS-Code-Extensions#browse-for-extensions)
 	- [Extensions for the VS-Code Server](https://github.com/joergklein/code-server/wiki/VS-Code-Extensions#extensions-for-the-vs-code-server)
 	- [Install an extension](https://github.com/joergklein/code-server/wiki/VS-Code-Extensions#install-an-extension)
+		- [Golang](https://github.com/joergklein/code-server/wiki/VS-Code-Extensions#golang)
+		- [LaTeX Workshop](https://github.com/joergklein/code-server/wiki/VS-Code-Extensions#latex-workshop)
+		- [Markdown all in one](https://github.com/joergklein/code-server/wiki/VS-Code-Extensions#markdown-all-in-one)
+		- [Vim](https://github.com/joergklein/code-server/wiki/VS-Code-Extensions#vim)
+
+
+
+
+
