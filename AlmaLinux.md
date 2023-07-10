@@ -130,7 +130,7 @@ For Windows OS there is a helpful free and open-source application - [Rufus](htt
 
 #### macOS
 
-The cross-platform tool [balenaEtcher](https://etcher.balena.io)is used to write images on macOS. It is simple too. Open banlenaEtcher, choose the image and the USB, and press Flash.
+The cross-platform tool [balenaEtcher](https://etcher.balena.io)is used to write images on macOS. It is simple too. Open balenaEtcher, choose the image and the USB, and press Flash.
 
 You can also use dd form CLI:
 
@@ -163,7 +163,7 @@ Next, the Installation Summary window will appear. It contains sections that you
 
 In this guide, we will update the following items,
 
-### Localisation
+### Localization
 
 #### Keyboard
 

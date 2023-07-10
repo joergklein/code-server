@@ -147,9 +147,119 @@ May 23 11:17:03 localhost code-server[761379]: [2023-05-23T11:17:03.585Z] info  
 
 You can see that the HTTP server is listening on `http://0.0.0.0:8080/`
 
+### settings.json
+
+This is my personal settings.json.
+
+```json
+{
+	"latex-workshop.intellisense.citation.backend": "biblatex",
+	"latex-workshop.latex.autoBuild.run": "never",
+	"latex-workshop.view.pdf.viewer": "tab",
+	"latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+	"files.autoSave": "afterDelay",
+	"files.autoSaveDelay": 30000,
+	"latex-workshop.latex.recipes": [
+		{
+			"name": "lualatex -> biber -> makeglossaries -> lualatex 2x",
+			"tools": [
+				"lualatex",
+				"biber",
+				"makeglossaries",
+				"lualatex",
+				"lualatex",
+				"lualatex"
+			]
+		},
+		{
+			"name": "lualatex",
+			"tools": [
+				"lualatex"
+			]
+		}
+	],
+	"latex-workshop.latex.tools": [
+		{
+			"name": "lualatex",
+			"command": "lualatex",
+			"args": [
+				"-shell-escape",
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-file-line-error",
+				"-pdf",
+				"%DOC%"
+			]
+		},
+		{
+			"name": "biber",
+			"command": "biber",
+			"args": [
+				"%DOCFILE%"
+			]
+		},
+		{
+			"name": "makeglossaries",
+			"command": "makeglossaries",
+			"args": [
+				"%DOCFILE%"
+			]
+		}
+	],
+	"latex-workshop.latex.clean.method": "glob",
+	"latex-workshop.latex.autoClean.run": "onBuilt",
+	"latex-workshop.latex.clean.fileTypes": [
+		"%DOCFILE%.aux",
+		"%DOCFILE%.bbl",
+		"%DOCFILE%.blg",
+		"%DOCFILE%.idx",
+		"%DOCFILE%.ilg",
+		"%DOCFILE%.ind",
+		"%DOCFILE%.lof",
+		"%DOCFILE%.lot",
+		"%DOCFILE%.out",
+		"%DOCFILE%.toc",
+		"%DOCFILE%.acn",
+		"%DOCFILE%.acr",
+		"%DOCFILE%.alg",
+		"%DOCFILE%.glg",
+		"%DOCFILE%.glo",
+		"%DOCFILE%.gls",
+		"%DOCFILE%.fls",
+		"%DOCFILE%.log",
+		"%DOCFILE%.fdb_latexmk",
+		"%DOCFILE%.snm",
+		"%DOCFILE%.synctex(busy)",
+		"%DOCFILE%.synctex.gz(busy)",
+		"%DOCFILE%.nav",
+		"%DOCFILE%.vrb",
+		"%DOCFILE%.abb",
+		"%DOCFILE%.abrn",
+		"%DOCFILE%.bcf",
+		"%DOCFILE%.dvi",
+		"%DOCFILE%.ist",
+		"%DOCFILE%.nom",
+		"%DOCFILE%.ntn",
+		"%DOCFILE%.run.xml",
+		"%DOCFILE%.synctex.gz"
+	],
+	"files.trimTrailingWhitespace": true,
+	"editor.minimap.enabled": false,
+	"editor.insertSpaces": false,
+	"editor.tabSize": 4,
+	"editor.detectIndentation": false,
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"[markdown]": {
+		"editor.renderWhitespace": "all",
+		"editor.acceptSuggestionOnEnter": "off"
+	}
+}
+```
+
 ### Update the Code-Server
 
-To updade code-server, install the new version over the old version. All user data is in `~/.local/share/code-server`, so they are preserved between installations.
+To update code-server, install the new version over the old version. All user data is in `~/.local/share/code-server`, so they are preserved between installations.
 
 ### Remove the Code-Server
 
@@ -167,7 +277,7 @@ If you installed with the install script, by default code-server will be in `~/.
 rm -rf ~/.local/lib/code-server-*
 ```
 
-Now you can open the browser and type the IP Address and the port 8080 for your server. You can log in with the password from config.ymal. Don't forget to open the port for the firewall and to set an A-record for the subdomain in the DNS.
+Now you can open the browser and type the IP Address and the port 8080 for your server. You can log in with the password from config.yaml. Don't forget to open the port for the firewall and to set an A-record for the subdomain in the DNS.
 
 ### Add the VS-Code Server into the NGINX Proxy Manager
 
