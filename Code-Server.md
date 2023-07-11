@@ -47,7 +47,7 @@ Add a sudo-user for the code-server
 
 ```bash
 sudo adduser code-server
-passwd codeserver
+passwd code-server
 sudo visudo
 ```
 
@@ -68,13 +68,13 @@ su - code-server
 After you have logged in as code-server run:
 
 ```bash
-sudo systemctl enable --now code-server$USER
+sudo systemctl enable --now code-server@$USER
 ```
 
 Check if code-server is running:
 
 ```bash
-sudo systemctl status code-server$USER
+sudo systemctl status code-server@$USER
 ```
 
 Output:
