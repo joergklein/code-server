@@ -116,7 +116,7 @@ The manual is maintained as a [wiki](https://github.com/joergklein/code-server/w
 	- [Language support](https://github.com/joergklein/code-server/wiki/Code-Server#language-support)
 	- [Requirements](https://github.com/joergklein/code-server/wiki/Code-Server#requirements)
 	- [Getting started](https://github.com/joergklein/code-server/wiki/Code-Server#getting-started)
-	- [settings.json](https://github.com/joergklein/code-server/wiki/Code-Server#settings-json)
+	- [settings.json](https://github.com/joergklein/code-server/wiki/Code-Server#settingsjson)
 		- [Update the Code-Server](https://github.com/joergklein/code-server/wiki/Code-Server#update-the-code-server)
 		- [Remove the Code-Server](https://github.com/joergklein/code-server/wiki/Code-Server#remove-the-code-server)
 		- [VS-Code Server and the NGINX Proxy Manager](https://github.com/joergklein/code-server/wiki/Code-Server#add-the-vs-code-server-into-the-nginx-proxy-manager)
