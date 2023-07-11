@@ -10,37 +10,37 @@ Create a new `A record` on the server that is called `proxy.example.com` that po
 
 If Portainer is used for the NGINX Proxy Manager, only the `docker-compose.yaml` is required. The `.env` file is not required.
 
-```bash
+```yaml
 version: '3.8'
 services:
-	app:
-		image: 'jc21/nginx-proxy-manager:latest'
-		ports:
-			- '80:80'
-			- '81:81'
-			- '443:443'
-		restart: always
-		links:
-			- 'db:db'
-		environment:
-			DB_MYSQL_HOST: "db"
-			DB_MYSQL_PORT: 3306
-			DB_MYSQL_USER: ${USERNAME}
-			DB_MYSQL_PASSWORD: ${PASSWORD}
-			DB_MYSQL_NAME: ${MYSQLNAME}
-		volumes:
-			- ./data:/data
-			- ./letsencrypt:/etc/letsencrypt
-	db:
-		image: 'jc21/mariadb-aria:latest'
-		restart: always
-		environment:
-			MYSQL_ROOT_PASSWORD: ${ROOTPASSWD}
-			MYSQL_DATABASE: ${DATABASE}
-			MYSQL_USER: ${USERNAME}
-			MYSQL_PASSWORD: ${PASSWORD}
-		volumes:
-			- ./data/mysql:/var/lib/mysql
+  app:
+    image: 'jc21/nginx-proxy-manager:latest'
+    ports:
+      - '80:80'
+      - '81:81'
+      - '443:443'
+    restart: always
+    links:
+      - 'db:db'
+    environment:
+      DB_MYSQL_HOST: "db"
+      DB_MYSQL_PORT: 3306
+      DB_MYSQL_USER: ${USERNAME}
+      DB_MYSQL_PASSWORD: ${PASSWORD}
+      DB_MYSQL_NAME: ${MYSQLNAME}
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
+  db:
+    image: 'jc21/mariadb-aria:latest'
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${ROOTPASSWD}
+      MYSQL_DATABASE: ${DATABASE}
+      MYSQL_USER: ${USERNAME}
+      MYSQL_PASSWORD: ${PASSWORD}
+    volumes:
+      - ./data/mysql:/var/lib/mysql
 ```
 
 
