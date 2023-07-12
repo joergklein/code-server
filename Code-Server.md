@@ -251,7 +251,9 @@ This is my personal settings.json.
   "[markdown]": {
     "editor.renderWhitespace": "all",
     "editor.acceptSuggestionOnEnter": "off"
-  }
+  },
+	"workbench.startupEditor": "none",
+	"cSpell.language": "en,de,de-DE,en-US"
 }
 ```
 
