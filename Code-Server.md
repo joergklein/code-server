@@ -253,7 +253,7 @@ This is my personal settings.json.
     "editor.acceptSuggestionOnEnter": "off"
   },
 	"workbench.startupEditor": "none",
-	"cSpell.language": "en,de,de-DE,en-US"
+	"cSpell.language": "en,de,de-DE,en-US",
 }
 ```
 
