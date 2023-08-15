@@ -114,4 +114,12 @@
 		- [LaTeX Workshop](VS-Code-Extensions#latex-workshop)
 		- [Markdown all in one](VS-Code-Extensions#markdown-all-in-one)
 		- [Vim](VS-Code-Extensions#vim)
+- [Weblate](Weblate#install-weblate)
+	- [Create a DNS A-Record](Weblate#create-a-dns-a-record-for-your-sub-domain-that-points-to-your-server)
+	- [Gmail as Weblate Email Host](Weblate#gmail-as-weblate-email-host)
+    	- [Find the SMTP Server for Gmail](Weblate#how-to-find-the-smtp-server-for-gmail)
+    	- [The Gmail SMTP Server Still Work With Two-Factor Authentication](Weblate#the-gmail-smtp-server-still-work-with-two-factor-authentication)
+    - [Add an SSH key to your GitLab account](Weblate#add-an-ssh-key-to-your-gitlab-account)
+    - [Add a Webhook in your Repository](Weblate#add-a-webhook-in-your-repository)
+    - [Deploy Weblate in Portainer](Weblate#deploy-weblate-in-portainer)
 

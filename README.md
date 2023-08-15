@@ -130,7 +130,14 @@ The manual is maintained as a [wiki](https://github.com/joergklein/code-server/w
 		- [LaTeX Workshop](https://github.com/joergklein/code-server/wiki/VS-Code-Extensions#latex-workshop)
 		- [Markdown all in one](https://github.com/joergklein/code-server/wiki/VS-Code-Extensions#markdown-all-in-one)
 		- [Vim](https://github.com/joergklein/code-server/wiki/VS-Code-Extensions#vim)
-
+- [Weblate](https://github.com/joergklein/code-server/wiki/Weblate#install-weblate)
+	- [Create a DNS A-Record](https://github.com/joergklein/code-server/wiki/Weblate#create-a-dns-a-record-for-your-sub-domain-that-points-to-your-server)
+	- [Gmail as Weblate Email Host](https://github.com/joergklein/code-server/wiki/Weblate#gmail-as-weblate-email-host)
+    	- [Find the SMTP Server for Gmail](https://github.com/joergklein/code-server/wiki/Weblate#how-to-find-the-smtp-server-for-gmail)
+    	- [The Gmail SMTP Server Still Work With Two-Factor Authentication](https://github.com/joergklein/code-server/wiki/Weblate#the-gmail-smtp-server-still-work-with-two-factor-authentication)
+    - [Add an SSH key to your GitLab account](https://github.com/joergklein/code-server/wiki/Weblate#add-an-ssh-key-to-your-gitlab-account)
+    - [Add a Webhook in your Repository](https://github.com/joergklein/code-server/wiki/Weblate#add-a-webhook-in-your-repository)
+    - [Deploy Weblate in Portainer](https://github.com/joergklein/code-server/wiki/Weblate#deploy-weblate-in-portainer)
 
 
 

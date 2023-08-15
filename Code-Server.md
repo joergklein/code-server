@@ -103,10 +103,10 @@ May 23 11:14:26 localhost code-server[760861]: [2023-05-23T11:14:26.476Z] info	-
 May 23 11:14:26 localhost code-server[760861]: [2023-05-23T11:14:26.476Z] info	- Not serving HTTPS
 ```
 
-The next step is to change the directory to `/home/code-server/.config/code-server`. Open the `config.yaml` and change the bind-addr from `127.0.0.1:8080` to `0.0.0.0:8080`.
+The next step is to change the directory to `/home/code-server/.config/code-server`. Open the `config.yaml` and change the bind-addr from `127.0.0.1:8585` to `0.0.0.0:8585`.
 
 ```bash
-bind-addr: 0.0.0.0:8080
+bind-addr: 0.0.0.0:8585
 auth: password
 password: 5729253452400d7e9590940725a
 cert: false
@@ -139,13 +139,13 @@ May 23 11:17:02 localhost systemd[1]: Started code-server.
 May 23 11:17:03 localhost code-server[761379]: [2023-05-23T11:17:03.566Z] info  code-server 4.13.0 2798322b03e7f446f59c5142215c11711ed7a427
 May 23 11:17:03 localhost code-server[761379]: [2023-05-23T11:17:03.568Z] info  Using user-data-dir ~/.local/share/code-server
 May 23 11:17:03 localhost code-server[761379]: [2023-05-23T11:17:03.584Z] info  Using config file ~/.config/code-server/config.yaml
-May 23 11:17:03 localhost code-server[761379]: [2023-05-23T11:17:03.584Z] info  HTTP server listening on http://0.0.0.0:8080/
+May 23 11:17:03 localhost code-server[761379]: [2023-05-23T11:17:03.584Z] info  HTTP server listening on http://0.0.0.0:8585/
 May 23 11:17:03 localhost code-server[761379]: [2023-05-23T11:17:03.584Z] info  - Authentication is enabled
 May 23 11:17:03 localhost code-server[761379]: [2023-05-23T11:17:03.585Z] info  - Using password from ~/.config/code-server/config.yaml
 May 23 11:17:03 localhost code-server[761379]: [2023-05-23T11:17:03.585Z] info  - Not serving HTTPS
 ```
 
-You can see that the HTTP server is listening on `http://0.0.0.0:8080/`
+You can see that the HTTP server is listening on `http://0.0.0.0:8585/`
 
 ### settings.json
 
