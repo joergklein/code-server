@@ -52,42 +52,42 @@ docker-compose.yaml
 ```yaml
 version: '3.8'
 services:
-  weblate:
-    ports:
-    - 8080:8080
-    image: weblate/weblate
-    tmpfs:
-    - /run
-    - /tmp
-    volumes:
-    - weblate-data:/app/data
-    - weblate-cache:/app/cache
-    env_file:
-    - stack.env
-    restart: always
-    read_only: true
-    depends_on:
-    - database
-    - cache
-  database:
-    image: postgres:15-alpine
-    env_file:
-    - stack.env
-    volumes:
-    - postgres-data:/var/lib/postgresql/data
-    restart: always
-  cache:
-    image: redis:7-alpine
-    restart: always
-    read_only: true
-    command: [redis-server, --save, '60', '1']
-    volumes:
-    - redis-data:/data
+	weblate:
+		ports:
+		- 8080:8080
+		image: weblate/weblate
+		tmpfs:
+		- /run
+		- /tmp
+		volumes:
+		- weblate-data:/app/data
+		- weblate-cache:/app/cache
+		env_file:
+		- stack.env
+		restart: always
+		read_only: true
+		depends_on:
+		- database
+		- cache
+	database:
+		image: postgres:15-alpine
+		env_file:
+		- stack.env
+		volumes:
+		- postgres-data:/var/lib/postgresql/data
+		restart: always
+	cache:
+		image: redis:7-alpine
+		restart: always
+		read_only: true
+		command: [redis-server, --save, '60', '1']
+		volumes:
+		- redis-data:/data
 volumes:
-  weblate-cache: {}
-  weblate-data: {}
-  postgres-data: {}
-  redis-data: {}
+	weblate-cache: {}
+	weblate-data: {}
+	postgres-data: {}
+	redis-data: {}
 ```
 .env or stack.env
 

@@ -153,108 +153,109 @@ This is my personal settings.json.
 
 ```json
 {
-	"latex-workshop.intellisense.citation.backend": "biblatex",
-	"latex-workshop.latex.autoBuild.run": "never",
-	"latex-workshop.view.pdf.viewer": "tab",
-	"latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
-	"files.autoSave": "afterDelay",
-	"files.autoSaveDelay": 30000,
-	"latex-workshop.latex.recipes": [
-		{
-			"name": "lualatex -> biber -> makeglossaries -> lualatex 2x",
-			"tools": [
-				"lualatex",
-				"biber",
-				"makeglossaries",
-				"lualatex",
-				"lualatex",
-				"lualatex"
-			]
-		},
-		{
-			"name": "lualatex",
-			"tools": [
-				"lualatex"
-			]
-		}
-	],
-	"latex-workshop.latex.tools": [
-		{
-			"name": "lualatex",
-			"command": "lualatex",
-			"args": [
-				"-shell-escape",
-				"-synctex=1",
-				"-interaction=nonstopmode",
-				"-file-line-error",
-				"-pdf",
-				"%DOC%"
-			]
-		},
-		{
-			"name": "biber",
-			"command": "biber",
-			"args": [
-				"%DOCFILE%"
-			]
-		},
-		{
-			"name": "makeglossaries",
-			"command": "makeglossaries",
-			"args": [
-				"%DOCFILE%"
-			]
-		}
-	],
-	"latex-workshop.latex.clean.method": "glob",
-	"latex-workshop.latex.autoClean.run": "onBuilt",
-	"latex-workshop.latex.clean.fileTypes": [
-		"%DOCFILE%.aux",
-		"%DOCFILE%.bbl",
-		"%DOCFILE%.blg",
-		"%DOCFILE%.idx",
-		"%DOCFILE%.ilg",
-		"%DOCFILE%.ind",
-		"%DOCFILE%.lof",
-		"%DOCFILE%.lot",
-		"%DOCFILE%.out",
-		"%DOCFILE%.toc",
-		"%DOCFILE%.acn",
-		"%DOCFILE%.acr",
-		"%DOCFILE%.alg",
-		"%DOCFILE%.glg",
-		"%DOCFILE%.glo",
-		"%DOCFILE%.gls",
-		"%DOCFILE%.fls",
-		"%DOCFILE%.log",
-		"%DOCFILE%.fdb_latexmk",
-		"%DOCFILE%.snm",
-		"%DOCFILE%.synctex(busy)",
-		"%DOCFILE%.synctex.gz(busy)",
-		"%DOCFILE%.nav",
-		"%DOCFILE%.vrb",
-		"%DOCFILE%.abb",
-		"%DOCFILE%.abrn",
-		"%DOCFILE%.bcf",
-		"%DOCFILE%.dvi",
-		"%DOCFILE%.ist",
-		"%DOCFILE%.nom",
-		"%DOCFILE%.ntn",
-		"%DOCFILE%.run.xml",
-		"%DOCFILE%.synctex.gz"
-	],
-	"files.trimTrailingWhitespace": true,
-	"editor.minimap.enabled": false,
-	"editor.tabSize": 4,
-	"editor.detectIndentation": true,
-	"editor.formatOnSave": true,
-	"workbench.startupEditor": "none",
-	"cSpell.language": "en,de,de-DE,en-US",
-	"[markdown]": {
-		"editor.defaultFormatter": "yzhang.markdown-all-in-one"
-	},
-	"r.plot.useHttpgd": true,
-	"workbench.editor.defaultBinaryEditor": "default",
+    "latex-workshop.intellisense.citation.backend": "biblatex",
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 30000,
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "lualatex -> biber -> makeglossaries -> lualatex 2x",
+            "tools": [
+                "lualatex",
+                "biber",
+                "makeglossaries",
+                "lualatex",
+                "lualatex",
+                "lualatex"
+            ]
+        },
+        {
+            "name": "lualatex",
+            "tools": [
+                "lualatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "lualatex",
+            "command": "lualatex",
+            "args": [
+                "-shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "makeglossaries",
+            "command": "makeglossaries",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.clean.method": "glob",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.fileTypes": [
+        "%DOCFILE%.aux",
+        "%DOCFILE%.bbl",
+        "%DOCFILE%.blg",
+        "%DOCFILE%.idx",
+        "%DOCFILE%.ilg",
+        "%DOCFILE%.ind",
+        "%DOCFILE%.lof",
+        "%DOCFILE%.lot",
+        "%DOCFILE%.out",
+        "%DOCFILE%.toc",
+        "%DOCFILE%.acn",
+        "%DOCFILE%.acr",
+        "%DOCFILE%.alg",
+        "%DOCFILE%.glg",
+        "%DOCFILE%.glo",
+        "%DOCFILE%.gls",
+        "%DOCFILE%.fls",
+        "%DOCFILE%.log",
+        "%DOCFILE%.fdb_latexmk",
+        "%DOCFILE%.snm",
+        "%DOCFILE%.synctex(busy)",
+        "%DOCFILE%.synctex.gz(busy)",
+        "%DOCFILE%.nav",
+        "%DOCFILE%.vrb",
+        "%DOCFILE%.abb",
+        "%DOCFILE%.abrn",
+        "%DOCFILE%.bcf",
+        "%DOCFILE%.dvi",
+        "%DOCFILE%.ist",
+        "%DOCFILE%.nom",
+        "%DOCFILE%.ntn",
+        "%DOCFILE%.run.xml",
+        "%DOCFILE%.synctex.gz"
+    ],
+    "files.trimTrailingWhitespace": true,
+    "editor.minimap.enabled": false,
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "workbench.startupEditor": "none",
+    "cSpell.language": "en,de,de-DE,en-US",
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "r.plot.useHttpgd": true,
+    "workbench.editor.defaultBinaryEditor": "default",
 }
 ```
 

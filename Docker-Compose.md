@@ -20,9 +20,9 @@ curl -L "https://github.com/docker/compose/releases/download/v2.18.1/docker-comp
 Output:
 
 ```sh
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+	% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+																 Dload  Upload   Total   Spent    Left  Speed
+	0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
 100 42.8M  100 42.8M    0     0  45.1M      0 --:--:-- --:--:-- --:--:-- 58.2M
 ```
 
