@@ -6,7 +6,7 @@ We have covered the installation steps for setting up Docker packages on Almalin
 
 Just like the previous version of Almalinux 8, the 9 also not offers Docker’s latest packages to install. So, we manually run the given command to enable the Docker repository on Almalinux 9.
 
-```bash
+```sh
 sudo dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
 ```
 
@@ -14,7 +14,7 @@ sudo dnf config-manager --add-repo=https://download.docker.com/linux/centos/dock
 
 Once the system is ready, we can execute the main installation command to configure Docker CE on Almalinux 9. This will install the dependencies and extra packages we required to run this open-source container service on RHEL-based Linux systems.
 
-```bash
+```sh
 sudo dnf install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
@@ -22,19 +22,19 @@ sudo dnf install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 Next, we start and enable the Docker service and after that, we will go through a command that will let’s know whether it is working fine without any errors or not.
 
-```bash
+```sh
 sudo systemctl enable --now docker
 ```
 
 To check the service status:
 
-```bash
+```sh
 sudo systemctl status docker
 ```
 
 Output:
 
-```bash
+```sh
 systemctl status docker
 ● docker.service - Docker Application Container Engine
 	  Loaded: loaded (/usr/lib/systemd/system/docker.service; enabled; preset: disabled)
@@ -63,7 +63,7 @@ TriggeredBy: ● docker.socket
 
 By default to run the Docker command, we need to use the sudo every time with it. To remove it, we can add our current user to the Docker group. After that, we can run the Docker command tool to create containers without the sudo rights.
 
-```bash
+```sh
 sudo usermod -aG docker $USER
 newgrp docker
 ```
@@ -72,13 +72,13 @@ newgrp docker
 
 We have already completed all the steps required to set up and configure the Docker on AlmaLinux 9. Now, let’s test our Docker command line to confirm it is working and creating containers without producing any common errors.
 
-```bash
+```sh
 docker run hello-world
 ```
 
 If the output of the above command contains this text:
 
-```bash
+```sh
 Hello from Docker! This message shows that your installation appears to be working correctly.
 ```
 
@@ -88,7 +88,7 @@ Then your installation is correct and you want to create docker containers.
 
 Later after completing your testing or project, if you don’t require the container service then you can remove the Docker any time by running the given commands:
 
-```bash
+```sh
 sudo dnf remove -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sudo rm -rf /var/lib/docker
 sudo rm -rf /var/lib/containerd

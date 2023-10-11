@@ -4,13 +4,13 @@ Portainer is an open source tool for managing container-based applications under
 
 The prerequisite for installing Portainer is a working Docker environment or a set up Docker host. The first step is to provision a volume for Portainer under Docker, which is mounted and used by Portainer inside the Portainer container to `/data`.
 
-```bash
+```sh
 docker volume create portainer_data
 ```
 
 Then the Portainer container is created with the following command:
 
-```bash
+```sh
 docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
 ```
 
@@ -18,7 +18,7 @@ The portainer image is automatically downloaded and the container is created. Th
 
 The user interface of Portainer can now be reached via the following url:
 
-```bash
+```sh
 http://IP_ADRESSE:9000/
 ```
 
@@ -43,19 +43,19 @@ First we display all running containers:
 
 Show and delete container Id
 
-```bash
+```sh
 docker container ls
 ```
 
 Then the running Portainer container is stopped:
 
-```bash
+```sh
 docker stop portainer
 ```
 
 Then the stopped container is deleted via the Id:
 
-```bash
+```sh
 docker container rm ID
 ```
 
@@ -63,14 +63,14 @@ It is generally sufficient to specify IDs with the first characters, as long as 
 
 The same is now done for the images. We also display them and delete the portainer image via the corresponding ID.
 
-```bash
+```sh
 docker image ls
 docker image rm ID
 ```
 
 Portainer is then reinstalled as described at the beginning. This uses the persistent volume that was created during the initial installation, so that all settings that were made previously are available to us again after an update:
 
-```bash
+```sh
 docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
 ```
 

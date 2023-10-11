@@ -8,7 +8,7 @@ The **SSH-key** pair authentication employs the use of SSH keys which are crypto
 
 To start the show, we will create an **RSA** key pair which comprises a public and private key. We will demystify these keys later on in the guide. To create the key pair, run the command:
 
-```bash
+```sh
 ssh-keygen
 OR
 ssh-keygen -t rsa
@@ -18,13 +18,13 @@ The above commands create a **2048**-bit RSA key pair which is considered good e
 
 To do this, simply pass the `-b` flag. This is exactly what we are going to do.
 
-```bash
+```sh
 ssh-keygen -b 4096
 ```
 
 Output:
 
-```bash
+```sh
 Generating public/private rsa key pair.
 ```
 
@@ -32,7 +32,7 @@ Right after you press **ENTER**, you will be asked to provide the path in which 
 
 Output:
 
-```bash
+```sh
 Enter file in which to save the key (/root/.ssh/id_rsa):
 ```
 
@@ -42,14 +42,14 @@ However, this is limiting when you want to configure passwordless ssh-key authen
 
 Output:
 
-```bash
+```sh
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
 ```
 
 Output:
 
-```bash
+```sh
 Your identification has been saved in /root/.ssh/id_rsa
 Your public key has been saved in /root/.ssh/id_rsa.pub
 The key fingerprint is:
@@ -70,13 +70,13 @@ The key's randomart image is:
 
 At this point, your keys should be stored in the *~/.ssh* directory which is a hidden directory in your home directory. Just to confirm this, run the command:
 
-```bash
+```sh
 ls -la ~/.ssh
 ```
 
 Output:
 
-```bash
+```sh
 total 20
 drwx------  2 root root  103 May 30 08:54 .
 dr-xr-x---. 7 root root 4096 May 23 11:17 ..
@@ -98,7 +98,7 @@ The next step is to copy or transfer the public key to the remote server or host
 
 The **ssh-copy-id** command takes the following syntax:
 
-```bash
+```sh
 ssh-copy-id user@remote-host-ip-address
 ```
 
@@ -106,7 +106,7 @@ In our setup, we have a remote host with IP **172.103.125.146** and a configured
 
 To copy the public SSH key, we will run the command:
 
-```bash
+```sh
 ssh-copy-id joerg@172.103.125.146
 ```
 
@@ -114,7 +114,7 @@ If this is the first time connecting to the host, you will get the output shown 
 
 On your local system, the **known_hosts** file is created in the **~/.ssh** directory. The file contains the SSH fingerprints for remote hosts that you have connected to.
 
-```bash
+```sh
 -rw-------  1 root root 3381 May 30 08:54 id_rsa
 -rw-r--r--  1 root root  740 May 30 08:54 id_rsa.pub
 -rw-------  1 root root  274 May 21 14:56 known_hosts
@@ -122,13 +122,13 @@ On your local system, the **known_hosts** file is created in the **~/.ssh** dire
 
 You can view it as follows.
 
-```bash
+```sh
 cat ~/.ssh/known_hosts
 ```
 
 Output:
 
-```bash
+```sh
 217.160.197.142 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINbBMvvDjN4IP04VAZlDH42A+HL25ifeIK9CorAvaMA/
 217.160.197.142 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFjDE2sDVlaHhXudMMsLEuJvY+nBuTbwLGpQkLaJ5oxIR9vXinw/2dSzqnDAlrmJ1ZgWKQnvPh7Mz770Hp/sobU=
 ```
@@ -137,7 +137,7 @@ Output:
 
 With the public key now saved on the remote host, we can now login to the remote host without SSH password authentication. To test this, we will try logging in normally to the remote host.
 
-```bash
+```sh
 ssh joerg@172.103.125.146
 ```
 
@@ -145,14 +145,14 @@ From the output, you can see that we straight away dropped to the remote systemâ
 
 Now confirm that the public key is saved in the **authorized_keys** file on the remote host.
 
-```bash
+```sh
 ls -la ~/.ssh/
 ```
 
 Output:
 
 
-```bash
+```sh
 -rw-------  1 joerg joerg 3381 May 30 08:54 .
 -rw-r--r--  1 joerg joerg  740 May 30 08:54 ..
 -rw-------  1 joerg joerg  274 May 21 14:56 authorized_keys
@@ -160,7 +160,7 @@ Output:
 
 To view the file, use the `cat command` as follows:
 
-```bash
+```sh
 cat ~/.ssh/authorized_keys
 ```
 
@@ -170,7 +170,7 @@ We are not yet done, the password authentication is still enabled and this can p
 
 To eliminate this attack vector, it is highly advised to disable password authentication. This ensures that login is only possible through an SSH key pair. To achieve this, open the **sshd_config** file which is the main SSH configuration file.
 
-```bash
+```sh
 sudo vim /etc/ssh/sshd_config
 ```
 
@@ -178,7 +178,7 @@ Locate the PasswordAuthentication directive. If commented out, uncomment it and 
 
 Save the changes and exit the file. Then restart SSH to apply the change made.
 
-```bash
+```sh
 sudo systemctl restart sshd
 ```
 

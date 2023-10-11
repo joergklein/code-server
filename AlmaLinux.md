@@ -37,7 +37,7 @@ Download AlmaLinux ISO from the mirror. Select the nearest to your geographic ar
 Lower and beta versions can be found in the [Vault](https://repo.almalinux.org/vault/)
 Run the curl command in the command line:
 
-```bash
+```sh
 curl -O https://repo.almalinux.org/almalinux/9/isos/x86_64/AlmaLinux-9.1-x86_64-dvd.iso
 ```
 
@@ -45,7 +45,7 @@ curl -O https://repo.almalinux.org/almalinux/9/isos/x86_64/AlmaLinux-9.1-x86_64-
 
 Download and import the AlmaLinux public key:
 
-```bash
+```sh
 curl -O https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-9
 gpg --import RPM-GPG-KEY-AlmaLinux-9
 ```
@@ -54,19 +54,19 @@ Verify the downloaded ISO image checksum:
 
 Download a checksums list
 
-```bash
+```sh
 $ curl -O https://repo.almalinux.org/almalinux/9/isos/x86_64/CHECKSUM
 ```
 
 Verify the checksums list, we are looking for a “Good signature”
 
-```bash
+```sh
 gpg --verify CHECKSUM
 ```
 
 Output:
 
-```bash
+```sh
 gpg: Signature made Tue 13 Dec 2022 14:09:50 CET
 gpg:                using RSA key BF18AC2876178908D6E71267D36CB86CB86B3716
 gpg: Good signature from "AlmaLinux OS 9 <packager@almalinux.org>" [unknown]
@@ -77,25 +77,25 @@ Primary key fingerprint: BF18 AC28 7617 8908 D6E7  1267 D36C B86C B86B 3716
 
 Calculate the downloaded ISO SHA256 checksum
 
-```bash
+```sh
 sha256sum AlmaLinux-9.1-x86_64-dvd.iso
 ```
 
 Output:
 
-```bash
+```sh
 2a44e3f8a012c132da19b9aae2bf949e20b116f0a2a7ac3eca111972f4ac952f  AlmaLinux-9.1-x86_64-dvd.iso
 ```
 
 Compare it with the expected checksum, it should be the same
 
-```bash
+```sh
 cat CHECKSUM | grep -E 'SHA256.*AlmaLinux-9.1-x86_64-dvd.iso'
 ```
 
 Output:
 
-```bash
+```sh
 SHA256 (AlmaLinux-9.1-x86_64-dvd.iso) = 2a44e3f8a012c132da19b9aae2bf949e20b116f0a2a7ac3eca111972f4ac952f
 ```
 
@@ -115,7 +115,7 @@ You need to look for `/dev/sda` or `/dev/sdb` or `/dev/sdc`, which is your targe
 
 After you found out the location of your target USB, navigate to the location of your source ISO. Run the dd command to copy files from ISO to USB:
 
-```bash
+```sh
 sudo dd if=./AlmaLinux-9.1-x86_64-dvd.iso of=/dev/sdX status=progress
 ```
 
@@ -134,7 +134,7 @@ The cross-platform tool [balenaEtcher](https://etcher.balena.io)is used to write
 
 You can also use dd form CLI:
 
-```bash
+```sh
 sudo dd if=./AlmaLinux-9.1-x86_64-dvd.iso of=/dev/diskXXX status=progress
 ```
 

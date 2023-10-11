@@ -4,19 +4,19 @@ Before Tex Live can be installed, it makes sense to install a few more packages.
 
 Install perl
 
-```bash
+```sh
 dnf install perl
 ```
 
 Install libnsl
 
-```bash
+```sh
 dnf install libnsl
 ```
 
 Install inkscape
 
-```bash
+```sh
 dnf install inkscape
 ```
 
@@ -49,7 +49,7 @@ A separate page describes [various ways to acquire the software](https://tug.org
 
 If you're re-installing after a previous attempt, be sure to completely remove your failed installation. By default, this would be in these two directories (on Unix-like systems):
 
-```bash
+```sh
 rm -rf /usr/local/texlive/2022
 rm -rf ~/.texlive2022
 ```
@@ -67,7 +67,7 @@ For information on all of the installer options, run `install-tl --help`, or see
 
 Once you have the TeX Live distribution, run the [install-tl](https://tug.org/texlive/doc/install-tl.html) script to install, like this:
 
-```bash
+```sh
 cd /install-tl-20230520/
 perl install-tl -gui text
  <O> options:
@@ -98,7 +98,7 @@ It can take an hour or more to copy all the files, depending on the installation
 
 After the installation finishes, you must add the directory of TeX Live binaries to your PATH—except on Windows, where the installer takes care of this. The installer shows the exact lines that should be added. As an example, for Bourne-compatible shells (e.g., in `~/.profile` or `~/.bashrc`):
 
-```bash
+```sh
 PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH
 ```
 

@@ -8,7 +8,7 @@ Ansible can be used in provisioning to build up the numerous servers required in
 
 It is essential to ensure your existing operating version is up-to-date before installing new software. Update your system by executing the below command.
 
-```bash
+```sh
 sudo dnf update
 ```
 
@@ -18,32 +18,32 @@ The Ansible package and its dependencies are unavailable in AlmaLinux 9's defaul
 
 Install the EPEL repository on the system by executing the below command.
 
-```bash
+```sh
 sudo dnf install epel-release
 ```
 
 ## Install Ansible with the dnf command
 Execute the below command to install the Ansible package from the EPEL repository.
 
-```bash
+```sh
 sudo dnf install ansible
 ```
 
 After successfully installing Ansible and its dependencies, verify its version by executing the below command.
 
-```bash
+```sh
 ansible --version
 ```
 
 Output:
 
-```bash
+```sh
 ansible [core 2.13.3]
 config file = /etc/ansible/ansible.cfg
-configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+configured module search path  = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
 ansible python module location = /usr/lib/python3.9/site-packages/ansible
-ansible collection location = /root/.ansible/collections:/usr/share/ansible/collections
-executable location = /usr/bin/ansible
+ansible collection location    = /root/.ansible/collections:/usr/share/ansible/collections
+executable location            = /usr/bin/ansible
 python version = 3.9.14 (main, Jan  9 2023, 00:00:00) [GCC 11.3.1 20220421 (Red Hat 11.3.1-2)]
 jinja version = 3.1.2
 libyaml = True
@@ -57,7 +57,7 @@ If you wish to install the most recent version of Ansible, you can use Pip. To i
 
 Update your system by executing the below command.
 
-```bash
+```sh
 sudo dnf update
 ```
 
@@ -65,30 +65,30 @@ sudo dnf update
 
 Execute the below command to install Pip with Python 3.9 and other dependencies.
 
-```bash
+```sh
 sudo dnf  install python3-pip
 sudo pip3 install --upgrade pip
 ```
 
 Verify that you've installed Python and Pip by opening a command prompt and typing the following command:
 
-```bash
+```sh
 python -V
 ```
 
 Output:
 
-```bash
+```sh
 Python 3.9.13
 ```
 
-```bash
+```sh
 pip3 --version
 ```
 
 Output:
 
-```bash
+```sh
 pip 23.0.1 from /usr/local/lib/python3.9/site-packages/pip (python 3.9)
 ```
 
@@ -96,20 +96,20 @@ pip 23.0.1 from /usr/local/lib/python3.9/site-packages/pip (python 3.9)
 
 Execute the below commands one by one to install Ansible with Pip.
 
-```bash
+```sh
 sudo pip3 install setuptools-rust wheel
 sudo python -m pip install ansible
 ```
 
 After successfully installing Ansible, verify its version by executing the below command.
 
-```bash
+```sh
 ansible --version
 ```
 
 Output:
 
-```bash
+```sh
 ansible [core 2.14.3]
 config file = None
 configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
@@ -129,7 +129,7 @@ Ansible's default configuration file, `ansible.cfg`, is automatically created un
 
 The following commands create a project called `project-ansible` for the demonstration.
 
-```bash
+```sh
 cd /etc
 mkdir project-ansible
 cd project-ansible
@@ -137,7 +137,7 @@ cd project-ansible
 
 Create the `ansible.cfg` file under the folder `project-ansible` with the following details and save the file.
 
-```bash
+```sh
 [defaults]
 inventory = /home/ansible-admin/project-ansible/inventory
 remote_user = ansible-admin
@@ -152,7 +152,7 @@ become_ask_pass=False
 
 Then, create an `inventory` file under the folder `project-ansible`` with the following details and save the file.
 
-```bash
+```sh
 [Hostserver1]
 172.31.2.186
 
@@ -162,7 +162,7 @@ Then, create an `inventory` file under the folder `project-ansible`` with the fo
 
 Now, you must create SSH keys for your remote_user and share them among all the managed host servers. Here, `ansible-admin` is a remote_user.
 
-```bash
+```sh
 ssh-keygen
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/ansible-admin/.ssh/id_rsa):
@@ -189,14 +189,14 @@ The key's randomart image is:
 
 You can now share the SSH keys using the ssh-copy-id command.
 
-```bash
+```sh
 $ ssh-copy-id ansible-admin@172.31.2.186
 $ ssh-copy-id ansible-admin@172.31.2.187
 ```
 
 Output:
 
-```bash
+```sh
 /usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/ansible-admin/.ssh/id_rsa.pub"
 /usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
 /usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
@@ -221,19 +221,19 @@ and check to make sure that only the key(s) you wanted were added.
 
 Execute the below command on each managed host server to run all the commands without prompting a password.
 
-```bash
+```sh
 echo "ansible-admin ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/ansible-admin
 ```
 
 Using the ping module, verify the connectivity from the control node to managed hosts.
 
-```bash
+```sh
 ansible -i inventory all -m ping
 ```
 
 Output:
 
-```bash
+```sh
 172.31.2.186 | SUCCESS => {
 	"ansible_facts": {
 			"discovered_interpreter_python": "/usr/libexec/platform-python"
@@ -270,13 +270,13 @@ Create a `web.yaml` file under the folder `project-ansible` with the following d
 
  Run the playbook
 
-```bash
+```sh
 ansible-playbook -i inventory web.yaml
 ```
 
 Output:
 
-```bash
+```sh
 PLAY [Play to Packages] ********************************************************************
 
 TASK [Gathering Facts] ********************************************************************

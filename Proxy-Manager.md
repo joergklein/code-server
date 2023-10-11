@@ -52,7 +52,7 @@ Create a `docker-compose.yaml` file and a new project folder in the `/opt` direc
 
 Store passwords in plain text is not a good idea. Create `.env` file with the following content:
 
-```bash
+```sh
 USERNAME=proxy
 PASSWORD=supergeheim
 MYSQLNAME=npm
@@ -64,7 +64,7 @@ DATABASE=npm
 
 ### Start the NGINX Proxy Manager
 
-```bash
+```sh
 docker-compose up -d
 ```
 
@@ -76,12 +76,12 @@ Now we can log in to the web UI. Simply use your browser to connect to your serv
 
 If the NGINX Proxy Manager, Docker and Docker Compose are installed on the same server, the internal IP address is required.
 
-```bash
+```sh
 ip addr show docker0
 ```
 Output:
 
-```bash
+```sh
 3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
 link/ether 02:42:5d:50:ff:be brd ff:ff:ff:ff:ff:ff
 inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0

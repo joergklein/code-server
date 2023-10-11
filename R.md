@@ -7,10 +7,10 @@
 - Minimum 1 GB RAM
 
 ## Prepare Your System
- 
+
 Before we begin, there are a number of packages required. Begin by updating the available system packages:
 
-```bash
+```sh
 dnf update
 ```
 
@@ -19,7 +19,7 @@ The **R** packages are not included in the AlmaLinux core repository. We will in
 
 Enable the EPEL and POwerTools(CRB) on AlmaLinux.
 
-```bash
+```sh
 dnf install epel-release
 dnf config-manager --set-enabled crb
 ```
@@ -28,7 +28,7 @@ dnf config-manager --set-enabled crb
 
 **R** can now be installed from AlmaLinux
 
-```bash
+```sh
 dnf install R
 ```
 
@@ -36,13 +36,13 @@ dnf install R
 
 Verify the installation by printing the R version:
 
-```bash
-R --version 
+```sh
+R --version
 ```
 
 Output:
 
-```bash
+```sh
 R version 4.3.0 (2023-04-21) -- "Already Tomorrow"
 Copyright (C) 2023 The R Foundation for Statistical Computing
 Platform: x86_64-redhat-linux-gnu (64-bit)

@@ -2,7 +2,7 @@
 
 Install Git using the dnf command:
 
-```bash
+```sh
 dnf install git
 ```
 
@@ -21,7 +21,7 @@ Git comes with a tool called `git config` that lets you get and set configuratio
 
 The first thing you should do when you install Git is to set your user name and email address. This is important because every Git commit uses this information, and it’s immutably baked into the commits you start creating:
 
-```bash
+```sh
 git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 ```
@@ -31,7 +31,7 @@ Now that your identity is set up, you can configure the default text editor that
 
 If you want to use a different text editor, such as Emacs, you can do the following:
 
-```bash
+```sh
 git config --global core.editor vim
 ```
 
@@ -41,33 +41,38 @@ By default Git will create a branch called master when you create a new reposito
 
 To set main as the default branch name do:
 
-```bash
-$ git config --global init.defaultBranch main
+```sh
+git config --global init.defaultBranch main
 ```
 
 ### Checking Your Settings
 If you want to check your configuration settings, you can use the `git config --list` command to list all the settings Git can find at that point:
 
-```bash
-$ git config --list
+```sh
+git config --list
+```
+
+Output:
+
+```sh
 user.name=John Doe
 user.email=johndoe@example.com
 color.status=auto
 color.branch=auto
 color.interactive=auto
 color.diff=auto
-...
+```
 
 You may see keys more than once, because Git reads the same key from different files (`[path]/etc/gitconfig` and `~/.gitconfig`, for example). In this case, Git uses the last value for each unique key it sees.
 
 You can also check what Git thinks a specific key’s value is by typing `git config <key>`:
 
-```bash
-$ git config user.name
+```sh
+git config user.name
 ```
 
 Output:
 
-```bash
+```sh
 John Doe
 ```

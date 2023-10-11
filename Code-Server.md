@@ -31,13 +31,13 @@ Using the [install script](https://github.com/coder/code-server/blob/main/instal
 
 If you use the install script, you can preview what occurs during the install process:
 
-```bash
+```sh
 curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
 ```
 
 To install, run:
 
-```bash
+```sh
 curl -fsSL https://code-server.dev/install.sh | sh
 ```
 
@@ -45,7 +45,7 @@ When done, the install script prints out instructions for running and starting c
 
 Add a sudo-user for the code-server
 
-```bash
+```sh
 sudo adduser code-server
 passwd code-server
 sudo visudo
@@ -53,7 +53,7 @@ sudo visudo
 
 Add the line for `code-server`
 
-```bash
+```sh
 ## Allow root to run any commands anywhere
 root            ALL=(ALL)       ALL
 code-server     ALL=(ALL)       ALL
@@ -61,25 +61,25 @@ code-server     ALL=(ALL)       ALL
 
 Login as code-server
 
-```bash
+```sh
 su - code-server
 ```
 
 After you have logged in as code-server run:
 
-```bash
+```sh
 sudo systemctl enable --now code-server@$USER
 ```
 
 Check if code-server is running:
 
-```bash
+```sh
 sudo systemctl status code-server@$USER
 ```
 
 Output:
 
-```bash
+```sh
 [code-server@localhost code-server]$ sudo systemctl status --now code-server@$USER
 ● code-server@code-server.service - code-server
 	  Loaded: loaded (/usr/lib/systemd/system/code-server@.service; enabled; preset: disabled)
@@ -105,7 +105,7 @@ May 23 11:14:26 localhost code-server[760861]: [2023-05-23T11:14:26.476Z] info	-
 
 The next step is to change the directory to `/home/code-server/.config/code-server`. Open the `config.yaml` and change the bind-addr from `127.0.0.1:8585` to `0.0.0.0:8585`.
 
-```bash
+```sh
 bind-addr: 0.0.0.0:8585
 auth: password
 password: 5729253452400d7e9590940725a
@@ -113,7 +113,7 @@ cert: false
 ```
 After you have changed the bind-addr you have to restart the `code-server service`.
 
-```bash
+```sh
 sudo systemctl stop --now code-server@$USER
 sudo systemctl start --now code-server@$USER
 sudo systemctl status --now code-server@$USER
@@ -121,7 +121,7 @@ sudo systemctl status --now code-server@$USER
 
 Output:
 
-```bash
+```sh
 [code-server@localhost code-server]$ sudo systemctl status --now code-server@$USER
 ● code-server@code-server.service - code-server
 	  Loaded: loaded (/usr/lib/systemd/system/code-server@.service; enabled; preset: disabled)
@@ -250,6 +250,11 @@ This is my personal settings.json.
 	"editor.formatOnSave": true,
 	"workbench.startupEditor": "none",
 	"cSpell.language": "en,de,de-DE,en-US",
+	"[markdown]": {
+		"editor.defaultFormatter": "yzhang.markdown-all-in-one"
+	},
+	"r.plot.useHttpgd": true,
+	"workbench.editor.defaultBinaryEditor": "default",
 }
 ```
 
@@ -263,13 +268,13 @@ The code-server can be completely uninstalled by removing the application direct
 
 To delete settings and data:
 
-```bash
+```sh
 rm -rf ~/.local/share/code-server ~/.config/code-server
 ```
 
 If you installed with the install script, by default code-server will be in `~/.local/lib/code-server-<version>` and you can remove it with rm -rf. e.g.
 
-```bash
+```sh
 rm -rf ~/.local/lib/code-server-*
 ```
 

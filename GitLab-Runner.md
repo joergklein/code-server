@@ -8,13 +8,13 @@ From the official GitLab Repo, it is very easy to install and configure the GitL
 
 Debian, Mint, Ubuntu:
 
-```bash
+```sh
 curl -L "https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh" | bash
 ```
 
 AlmaLinux, Rocky-Linux, CentOS, Red Hat Enterprise Linux:
 
-```bash
+```sh
 curl -L "https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.rpm.sh" | bash
 dnf install gitlab-runner
 ```
@@ -23,13 +23,13 @@ dnf install gitlab-runner
 
 Debian, Mint, Ubuntu:
 
-```bash
+```sh
 apt-get install gitlab-runner
 ```
 
 AlmaLinux, Rocky-Linux, CentOS, Red Hat Enterprise Linux:
 
-```bash
+```sh
 dnf install gitlab-runner
 ```
 
@@ -37,13 +37,13 @@ dnf install gitlab-runner
 
 Debian, Mint, Ubuntu:
 
-```bash
+```sh
 apt-get install gitlab-runner
 ```
 
 AlmaLinux, Rocky-Linux, CentOS, Red Hat Enterprise Linux:
 
-```bash
+```sh
 dnf install gitlab-runner
 ```
 
@@ -60,13 +60,13 @@ Debian, Mint, Ubuntu:
 
 Replace `${arch}` with any of the supported architectures, e.g. `amd64`, `arm`, `arm64`. A full list of architectures can be found here https://gitlab-runner-downloads.s3.amazonaws.com/latest/index.html
 
-```bash
+```sh
 curl -LJO "https://gitlab-runner-downloads.s3.amazonaws.com/latest/deb/gitlab-runner_${arch}.deb"
  ```
 
 AlmaLinux, Rocky-Linux, CentOS, Red Hat Enterprise Linux:
 
-```bash
+```sh
 curl -LJO "https://gitlab-runner-downloads.s3.amazonaws.com/latest/rpm/gitlab-runner_${arch}.rpm"
 ```
 
@@ -74,7 +74,7 @@ FIPS compliant GitLab Runner on RHEL:
 
 Currently only amd64 is a supported arch.
 
-```bash
+```sh
 curl -LJO "https://gitlab-runner-downloads.s3.amazonaws.com/latest/rpm/gitlab-runner_amd64-fips.rpm"
 ```
 
@@ -82,13 +82,13 @@ curl -LJO "https://gitlab-runner-downloads.s3.amazonaws.com/latest/rpm/gitlab-ru
 
 Debian, Mint, Ubuntu:
 
-```bash
+```sh
 dpkg -i gitlab-runner_<arch>.deb
 ```
 
 AlmaLinux, Rocky-Linux, CentOS, Red Hat Enterprise Linux:
 
-```bash
+```sh
 rpm -i gitlab-runner_<arch>.rpm
 ```
 
@@ -98,13 +98,13 @@ Download the latest package for your system then upgrade as follows:
 
 Debian, Mint, Ubuntu:
 
-```bash
+```sh
 dpkg -i gitlab-runner_<arch>.deb
 ```
 
 AlmaLinux, Rocky-Linux, CentOS, Red Hat Enterprise Linux:
 
-```bash
+```sh
 rpm -Uvh gitlab-runner_<arch>.rpm
 ```
 
@@ -114,61 +114,61 @@ Simply download one of the binaries for your system.
 
 Linux x86-64
 
-```bash
+```sh
 curl -L --output /usr/local/bin/gitlab-runner "https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64"
 ```
 Linux x86
 
-```bash
+```sh
 curl -L --output /usr/local/bin/gitlab-runner "https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-386"
 ```
 
 Linux arm
 
-```bash
+```sh
 curl -L --output /usr/local/bin/gitlab-runner "https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-arm"
 ```
 
 Linux arm64
 
-```bash
+```sh
 curl -L --output /usr/local/bin/gitlab-runner "https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-arm64"
 ```
 
 Linux s390x
 
-```bash
+```sh
 curl -L --output /usr/local/bin/gitlab-runner "https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-s390x"
 ```
 
 Linux ppc64le
 
-```bash
+```sh
 curl -L --output /usr/local/bin/gitlab-runner "https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-ppc64le"
 ```
 
 Linux x86-64 FIPS Compliant
 
-```bash
+```sh
 curl -L --output /usr/local/bin/gitlab-runner "https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64-fips"
 ```
 You can download a binary for every available version as described in [Bleeding Edge - download any other tagged release](https://docs.gitlab.com/runner/install/bleeding-edge.html#download-any-other-tagged-release).
 
 Give it permissions to execute:
 
-```bash
+```sh
 chmod +x /usr/local/bin/gitlab-runner
 ```
 
 Create a GitLab CI user:
 
-```bash
+```sh
 useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
 ```
 
 Install and run as service:
 
-```bash
+```sh
 gitlab-runner install --user=gitlab-runner --working-directory=/home/gitlab-runner
 gitlab-runner start
 ```
@@ -181,13 +181,13 @@ Ensure you have `/usr/local/bin/` in `$PATH` for root or you might get a `comman
 
 Stop the service (you need elevated command prompt as before):
 
-```bash
+```sh
 gitlab-runner stop
 ```
 
 Download the binary to replace the GitLab Runner executable. For example:
 
-```bash
+```sh
 curl -L --output /usr/local/bin/gitlab-runner "https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64"
 ```
 
@@ -195,13 +195,13 @@ You can download a binary for every available version as described in [Bleeding 
 
 Give it permissions to execute:
 
-```bash
+```sh
 chmod +x /usr/local/bin/gitlab-runner
 ```
 
 Start the service:
 
-```bash
+```sh
 sudo gitlab-runner start
 ```
 
@@ -209,7 +209,7 @@ sudo gitlab-runner start
 
 Running the GitLab Runner is easy and yet suggested best way. To do so, Run the following command
 
-```bash
+```sh
 $ docker run -d --name gitlab-runner --restart always \
 	 -v /srv/gitlab-runner/config:/etc/gitlab-runner \
 	 -v /var/run/docker.sock:/var/run/docker.sock \
@@ -236,19 +236,19 @@ You just need to run register command from the binary or the executor you just i
 
 Running the GitLab Runner on linux
 
-```bash
+```sh
 gitlab-runner register
 ```
 
 Running in a Docker Container
 
-```bash
+```sh
 docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register
 ```
 
 This will prompt you some questions and just give the answers to register yourself, or, to register as one line, use the following command or parameters.
 
-```bash
+```sh
 gitlab-runner register \
 --non-interactive \
 --url "https://gitlab.com/" \

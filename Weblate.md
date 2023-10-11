@@ -39,7 +39,7 @@ You can use the SMTP server if you have enabled two-factor authentication on you
 
 Add this line with your domain for a new Webhook.
 
-```bash
+```sh
 https://weblate.example.com/hooks/gitlab/
 ```
 
@@ -49,7 +49,7 @@ If Portainer is used for Weblate, a `docker-compose.yaml` and a `stack.env` file
 
 docker-compose.yaml
 
-```bash
+```yaml
 version: '3.8'
 services:
   weblate:
@@ -91,7 +91,7 @@ volumes:
 ```
 .env or stack.env
 
-```
+```sh
 # See Weblate documentation for detailed description:
 # https://docs.weblate.org/en/latest/admin/install/docker.html#generic-settings
 

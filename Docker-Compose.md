@@ -9,17 +9,17 @@ Docker Compose works in all environments: production, staging, development, test
 - It can reuse the existing containers which is also an effective feature.
 - Using Docker Compose, we can use different environment variables in a configuration file and can customize the composition between different environments.
 
-## Download Docker Compose 
+## Download Docker Compose
 
 Use curl to download the Compose file into the `/usr/bin` directory.
 
-```bash
+```sh
 curl -L "https://github.com/docker/compose/releases/download/v2.18.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/bin/docker-compose
 ```
 
 Output:
 
-```bash
+```sh
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
@@ -28,19 +28,19 @@ Output:
 
 Next, set the correct permissions so that the `docker-compose` command is executable.
 
-```bash
+```sh
 chmod +x /usr/bin/docker-compose
 ```
 
 ### Verify the installation.
 
-```bash
+```sh
 docker-compose --version
 ```
 
 Output:
 
-```bash
+```sh
 Docker Compose version v2.18.1
 ```
 
@@ -48,16 +48,16 @@ Docker Compose version v2.18.1
 
 Login as User root.
 
-```bash
+```sh
 which docker-compose
 ```
 
 Output:
 
-```bash
+```sh
 /usr/bin/docker-compose
 ```
 
-```bash
+```sh
  rm -rf /usr/bin/docker-compose
  ```

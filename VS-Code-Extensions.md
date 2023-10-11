@@ -9,8 +9,30 @@ You can browse and install extensions from within VS Code. Bring up the Extensio
 
 Each extension in the list includes a brief description, the publisher, the download count, and a five star rating. You can select the extension item to display the extension's details page where you can learn more.
 
-## Extensions for the VS-Code Server
-
-## Install an extension
+## The extensions I use for my code server configuration.
 
 To install an extension, select the Install button. Once the installation is complete, the Install button will change to the Manage gear button.
+
+### Golang
+
+**Notice**:
+
+<img src="images/golang.png" alt="Golang">
+
+### Latex Workshop
+
+**Notice**:
+
+<img src="images/latex.png" alt="LaTeX Workshop">
+
+### Markdown all in one
+
+**Notice**: No configuration is needed.
+
+<img src="images/markdown.png" alt="Markdown all in one">
+
+### Vim
+
+**Notice**:
+
+<img src="images/vim.png" alt="Vim">
