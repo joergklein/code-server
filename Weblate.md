@@ -161,3 +161,15 @@ WEBLATE_EMAIL_HOST_USER=user.name@gmail.com
 WEBLATE_EMAIL_HOST_PASSWORD=hvoljhkxqqmtbets
 CLIENT_MAX_BODY_SIZE=200M
 ```
+
+### Add Weblate into the NGINX Proxy Manager
+
+Configure the details:
+
+<img src="images/weblate.png" alt="Weblate">
+
+### Set the Let's Encrypt certificate
+
+Change to SSL
+
+<img src="images/ssl.png" alt="SSL Portainer">
