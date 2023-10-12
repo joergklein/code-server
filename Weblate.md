@@ -49,7 +49,7 @@ If Portainer is used for Weblate, a `docker-compose.yaml` and a `stack.env` file
 
 docker-compose.yaml
 
-```yaml
+```sh
 version: '3.8'
 services:
 	weblate:

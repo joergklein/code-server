@@ -10,7 +10,7 @@ Create a new `A record` on the server that is called `proxy.example.com` that po
 
 If Portainer is used for the NGINX Proxy Manager, only the `docker-compose.yaml` is required. The `.env` file is not required.
 
-```yaml
+```sh
 version: '3.8'
 services:
 	app:

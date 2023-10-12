@@ -254,7 +254,7 @@ Create a sample playbook
 
 Create a `web.yaml` file under the folder `project-ansible` with the following details and save the file.
 
-```yaml
+```sh
 - name: Play to Packages
 	hosts:
 		- Hostserver1
