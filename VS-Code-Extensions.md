@@ -15,24 +15,28 @@ To install an extension, select the Install button. Once the installation is com
 
 ### Golang
 
-**Notice**:
-
 <img src="images/golang.png" alt="Golang">
 
 ### Latex Workshop
 
-**Notice**:
-
-<img src="images/latex.png" alt="LaTeX Workshop">
+<img src="images/latex-workshop.png" alt="LaTeX Workshop">
 
 ### Markdown all in one
 
-**Notice**: No configuration is needed.
-
-<img src="images/markdown.png" alt="Markdown all in one">
+<img src="images/markdown-all-in-one.png" alt="Markdown all in one">
 
 ### Vim
 
-**Notice**:
-
 <img src="images/vim.png" alt="Vim">
+
+### EditorConfig for VS Code
+
+<img src="images/editor-config.png" alt="EditorConfig for VS Code">
+
+### Code Spell Checker
+
+<img src="images/code-spell-checker.png" alt="Code Spell Checker">
+
+### German Code Spell Checker
+
+<img src="images/german-code-spell-checker.png" alt="German - Code Spell Checker">
