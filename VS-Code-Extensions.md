@@ -13,6 +13,10 @@ Each extension in the list includes a brief description, the publisher, the down
 
 To install an extension, select the Install button. Once the installation is complete, the Install button will change to the Manage gear button.
 
+### EditorConfig for VS Code
+
+<img src="images/editor-config.png" alt="EditorConfig for VS Code">
+
 ### Golang
 
 <img src="images/golang.png" alt="Golang">
@@ -25,9 +29,13 @@ To install an extension, select the Install button. Once the installation is com
 
 <img src="images/markdown-all-in-one.png" alt="Markdown all in one">
 
-### EditorConfig for VS Code
+### R Editor Support
 
-<img src="images/editor-config.png" alt="EditorConfig for VS Code">
+<img src="images/r.png" alt="R Editor Support">
+
+### R Debugger Support
+
+<img src="images/r-debugger.png" alt="R Debugger Support">
 
 ### Code Spell Checker
 
