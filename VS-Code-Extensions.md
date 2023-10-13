@@ -25,10 +25,6 @@ To install an extension, select the Install button. Once the installation is com
 
 <img src="images/markdown-all-in-one.png" alt="Markdown all in one">
 
-### Vim
-
-<img src="images/vim.png" alt="Vim">
-
 ### EditorConfig for VS Code
 
 <img src="images/editor-config.png" alt="EditorConfig for VS Code">
@@ -40,3 +36,8 @@ To install an extension, select the Install button. Once the installation is com
 ### German Code Spell Checker
 
 <img src="images/german-code-spell-checker.png" alt="German - Code Spell Checker">
+
+### Vim
+
+<img src="images/vim.png" alt="Vim">
+
