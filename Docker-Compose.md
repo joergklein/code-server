@@ -23,7 +23,7 @@ Output:
 	% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 																 Dload  Upload   Total   Spent    Left  Speed
 	0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-  100 42.8M  100 42.8M    0     0  45.1M      0 --:--:-- --:--:-- --:--:-- 58.2M
+100 42.8M  100 42.8M    0     0  45.1M      0 --:--:-- --:--:-- --:--:-- 58.2M
 ```
 
 Next, set the correct permissions so that the `docker-compose` command is executable.
