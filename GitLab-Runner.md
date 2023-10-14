@@ -226,7 +226,7 @@ To get GitLab Runner Configured on the GitLab Instance, you need to get the conf
 4. Shared Runners are provided by GitLab.com which is cloud-based autoscale-able Runners.
 5. But we need a Specific Runner, In which Look for the `Set Up a Runner Manually``
 
-<img src="images/gitlab-runner-configuration.webp" alt="GitLab Runner Configuration">
+<img src="images/gitlab-runner-configuration.png" alt="GitLab Runner Configuration">
 
 Then just copy the URL and Registration token and keep it with you for the next process.
 

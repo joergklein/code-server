@@ -21,11 +21,7 @@ The file types associated with **R** include:
 
 Full-time `R developers`, required an integrated development environment(IDE). The `RStudio` acts as the integrated development environment for **R**.
 
-## System requirements
-
-- Minimum 1 GB RAM
-
-## Prepare Your System
+## Prepare your server
 
 Before we begin, there are a number of packages required. Begin by updating the available system packages:
 
@@ -73,7 +69,7 @@ For more information about these matters see
 https://www.gnu.org/licenses/.
 ```
 
-##  Getting Started With R
+###  Getting Started With R
 
 Once installed, R can be used from the console. To launch the R console, execute the command:
 
@@ -81,7 +77,7 @@ Once installed, R can be used from the console. To launch the R console, execute
 R
 ```
 
-### Install the additional packages in R
+### Install additional packages in R
 
 ```sh
 install.packages("languageserver")
