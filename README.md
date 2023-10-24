@@ -141,4 +141,4 @@ The manual is maintained as a [wiki](https://github.com/joergklein/code-server/w
 
 
 
-
+Bildgröße: 594px * 197px
