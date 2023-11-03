@@ -35,7 +35,7 @@ cat ~/.ssh/id_rsa.pub | clip
 
 Which will copy the SSH key in text form to your clipboard.
 
-While logged into your GitLab account on gitlab.com, follow these steps:
+While logged into your GitLab account on `https://gitlab.com`, follow these steps:
 
 1. Select your avatar and click on settings
 2. Click SSH Keys
